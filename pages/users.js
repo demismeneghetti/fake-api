@@ -1,24 +1,22 @@
-const fake_api = "https://jsonplaceholder.typicode.com"
+// const url = require("../config/settings");
 
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let should = chai.should();
+// let chai = require('chai');
+// let chaiHttp = require('chai-http');
+// let should = chai.should();
 
-chai.use(chaiHttp);
+// chai.use(chaiHttp);
 
-class Users {
-  GetUsers(id) {
-    chai.request(fake_api)
-      .get(`/users/${id}`)
-      .end((err, res) => {
-      res.should.have.status(200);
-      res.body.should.be.a('array');
-      done();
-      }
-    );
-  };
-};
+// class Users {
+//   GetUsers(id) {
+//     chai.request(url.fakeApiUrl)
+//       .get(`/users/${id}`)
+//       .end((err, res) => {
+//         res.should.have.status(200);
+//         res.body.should.be.a('array');
+//       });
+//   };
+// };
 
-module.exports = {
-  Users
-};
+// module.exports = {
+//   GetUsers
+// };
